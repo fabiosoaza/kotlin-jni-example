@@ -20,7 +20,7 @@ Ex: Class ```NativeCall``` had to be defined at ```com.github.fabiosoaza.app``` 
 
 That's it!
 
-### Usefull Links
+### Useful Links
 [Javah Docs](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javah.html)  
 [Matt Moore - Kotlin JNI for Native Code](https://medium.com/@mattmoore_io/kotlin-jni-for-native-code-835e93af7ddf)  
 [Baeldung - Guide to JNI (Java Native Interface)](https://www.baeldung.com/jni)  
