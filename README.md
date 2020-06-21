@@ -11,11 +11,11 @@ Important: package of Kotlin/Java native implementation must match the native fu
 Ex: Class ```NativeCall``` had to be defined at ```com.github.fabiosoaza.app``` to match functions with prefix ```Java_com_github_fabiosoaza_app_NativeCall``` 
 
 ### Build example
-* To build example run script run.sh passing argument "build"  
+* To build example execute script run.sh passing argument "build"  
 ``` ./run.sh build```
 
 ### Run example
-* To run example run script run.sh passing argument "run"  
+* To run example execute script run.sh passing argument "run"  
 ``` ./run.sh run```
 
 That's it!
