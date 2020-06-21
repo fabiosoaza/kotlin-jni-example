@@ -1,15 +1,15 @@
 CC= gcc
 RM= rm -vf
-CFLAGS= -Wall -g -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux
+CFLAGS= -Wall -g -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux -shared
 CPPFLAGS= -I. 
-SRCFILES= native/src/jni-example.c
-OBJFILES= $(patsubst %.c, %.o, $(SRCFILES))
-PROGFILES= $(patsubst %.c, %, $(SRCFILES))
-#VPATH=native/src
 
+SOURCES = $(shell echo native/src/*.c)
+HEADERS = $(shell echo native/src/include/*.h)
+OBJECTS = $(SOURCES:.c=.o)
+TARGET  = native/libjni-example.so
 
-.PHONY: all clean
-
-all: $(PROGFILES)
+all: $(TARGET)
 clean:
-	$(RM) $(OBJFILES) $(PROGFILES) *~
+	$(RM) native/*.so native/*.o native/src/*.o
+$(TARGET): $(OBJECTS)
+	$(CC) $(FLAGS) $(CFLAGS) -o $(TARGET) $(OBJECTS)

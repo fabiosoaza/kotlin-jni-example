@@ -7,7 +7,7 @@ JNIEXPORT void JNICALL Java_com_github_fabiosoaza_app_NativeCall_sayHello(JNIEnv
 
  JNIEXPORT jlong JNICALL Java_com_github_fabiosoaza_app_NativeCall_sumIntegers
    (JNIEnv* env, jobject thisObject, jint first, jint second) {
-     printf("The numbers received are :%d and %d \n", first, second);
+     printf("The numbers received are : %d and %d \n", first, second);
      return (long)first + (long)second;
  }
 
